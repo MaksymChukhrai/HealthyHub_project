@@ -1,0 +1,59 @@
+/* --PC----стили для Dashboard\все 3 графика------ */
+@media screen and (min-width: 1440px) {
+  .scroll-container {
+    overflow-x: hidden;
+  }
+  .graph-line {
+    width: 666px;
+  }
+
+  .weight-graph-line {
+    background-color: var(--primaryBlack2);
+    border-radius: 12px;
+    width: 1350px;
+  }
+
+  .caloriesTitle,
+  .weightTitle,
+  .waterTitle {
+    margin-top: 0;
+  }
+
+  .table-container {
+    display: block;
+    padding: 24px 24px 28px 21px;
+    width: 1350px;
+  }
+
+  .upper-row,
+  .lower-row {
+    display: flex;
+    padding-right: 25px;
+    gap: 3px;
+  }
+  .table-cell.upper,
+  .table-cell.lower {
+    width: 20px;
+  }
+
+  /* Стили для всплывающей подсказки */
+  .chartjs-tooltip {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ddd;
+    color: #333;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+  }
+
+  /* Стили для заголовка всплывающей подсказки */
+  .chartjs-tooltip-header {
+    font-weight: bold;
+  }
+
+  /* Стили для значения всплывающей подсказки */
+  .chartjs-tooltip-body {
+    color: #8d1818;
+  }
+}
