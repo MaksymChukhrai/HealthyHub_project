@@ -61,9 +61,9 @@ const CaloriesGraph = () => {
     ],
   };
 
-  // Проверка наличия данных
+  // Перевірка наявності даних
   if (!totalCalories || totalCalories.length === 0) {
-    // Рендерим график с рандомными значениями за каждый день месяца
+    // Рендеримо графік із рандомними значеннями за кожен день місяця
     const randomData = {
       labels,
       datasets: [
@@ -105,7 +105,7 @@ const CaloriesGraph = () => {
     );
   }
 
-  // Рендерим график с настоящими данными
+  // Рендеримо графік зі справжніми даними
   return (
     <GraphContainer className="scroll-container">
       <div className="caloriesTitle">
