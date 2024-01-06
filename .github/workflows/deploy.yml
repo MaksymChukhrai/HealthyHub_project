@@ -3,8 +3,6 @@ name: Build and deploy to GitHub Pages
 on:
   push:
     branches: [main]
-env:
-  VITE_API_TEST: ${{secrets.VITE_API_TEST}}
 
 jobs:
   build-and-deploy:
@@ -20,7 +18,11 @@ jobs:
           cp ./dist/index.html ./dist/404.html
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
-        with:
-          branch: gh-pages
-          folder: dist
+        run: |
+          git config --global user.name "Maksym Chukhrai"
+          git config --global user.email "m.chukhrai@gmail.com"
+          git init
+          git checkout -b gh-pages
+          git add .
+          git commit -m "Deploy to GitHub Pages"
+          git push --force origin gh-pages
