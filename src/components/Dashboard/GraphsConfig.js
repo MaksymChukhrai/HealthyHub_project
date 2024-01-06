@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-const gridColor = '#292928'; // Цвет сетки
+const gridColor = '#292928'; // Колір сітки
 
 export const commonXAxisOptions = {
   type: 'linear',
@@ -32,9 +32,9 @@ export const commonXAxisOptions = {
     stepSize: 1,
   },
   grid: {
-    color: gridColor, // Цвет сетки
-    borderColor: gridColor, // Цвет линий сетки
-    borderWidth: 0.5, // Толщина линий сетки
+    color: gridColor, // Колір сітки
+    borderColor: gridColor, // Колір ліній сітки
+    borderWidth: 0.5, // Товщина ліній сітки
   },
 };
 
@@ -80,7 +80,7 @@ export const commonOptions = {
   maintainAspectRatio: false,
   scales: {
     x: commonXAxisOptions,
-    y: caloriesYAxisOptions, // По умолчанию используем для Calories графика
+    y: caloriesYAxisOptions, // За замовчуванням використовуємо для Calories графіка
   },
   plugins: {
     legend: commonLegendOptions,
@@ -98,17 +98,17 @@ export const commonOptions = {
   },
 };
 
-// Добавим функцию, которая возвращает правильную единицу измерения для всплывающей подсказки
+// Додамо функцію, яка повертає правильну одиницю виміру для спливаючої підказки
 function getTooltipUnit(label) {
   if (label === 'Calories') {
     return 'calories';
   } else if (label === 'Water') {
     return 'milliliters';
   }
-  // Добавьте дополнительные проверки для других графиков, если необходимо
+
   return '';
 }
-// Добавим функцию, которая возвращает правильную метку для всплывающей подсказки
+// Додамо функцію, яка повертає правильну мітку для спливаючої підказки
 function getTooltipLabel(label) {
   if (label === 'Calories') {
     return 'Calories';
